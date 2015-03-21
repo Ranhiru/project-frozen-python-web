@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  compliment_id: 
+  label_id: 
+  user_id: 
+
+two:
+  compliment_id: 
+  label_id: 
+  user_id: 
