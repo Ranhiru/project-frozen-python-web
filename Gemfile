@@ -45,6 +45,15 @@ group :development, :test do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
+  end
+
+  gem 'shoulda-matchers'
+  gem 'faker'
+  gem "factory_girl_rails", "~> 4.0"
+  gem 'database_cleaner'
 end
 
 group :production do
