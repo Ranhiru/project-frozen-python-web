@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321022552) do
+ActiveRecord::Schema.define(version: 20150321031040) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "compliment_id"
@@ -23,6 +23,19 @@ ActiveRecord::Schema.define(version: 20150321022552) do
 
   add_index "comments", ["compliment_id"], name: "index_comments_on_compliment_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
+  create_table "compliment_labels", force: :cascade do |t|
+    t.integer  "compliment_id"
+    t.integer  "label_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "compliment_labels", ["compliment_id", "label_id"], name: "index_compliment_labels_on_compliment_id_and_label_id", unique: true
+  add_index "compliment_labels", ["compliment_id"], name: "index_compliment_labels_on_compliment_id"
+  add_index "compliment_labels", ["label_id"], name: "index_compliment_labels_on_label_id"
+  add_index "compliment_labels", ["user_id"], name: "index_compliment_labels_on_user_id"
 
   create_table "compliments", force: :cascade do |t|
     t.integer  "user_id"
