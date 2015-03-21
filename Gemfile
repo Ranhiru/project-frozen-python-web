@@ -51,6 +51,8 @@ group :development, :test do
   end
 
   gem 'shoulda-matchers'
+  gem 'faker'
+  gem 'factory_girl'
 end
 
 group :production do
