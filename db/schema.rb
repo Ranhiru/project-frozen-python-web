@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321031040) do
+ActiveRecord::Schema.define(version: 20150321033628) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "compliment_id"
@@ -56,6 +56,17 @@ ActiveRecord::Schema.define(version: 20150321031040) do
   end
 
   add_index "labels", ["user_id"], name: "index_labels_on_user_id"
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "compliment_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "likes", ["compliment_id"], name: "index_likes_on_compliment_id"
+  add_index "likes", ["user_id", "compliment_id"], name: "index_likes_on_user_id_and_compliment_id", unique: true
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
