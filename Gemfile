@@ -52,7 +52,7 @@ group :development, :test do
 
   gem 'shoulda-matchers'
   gem 'faker'
-  gem 'factory_girl'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :production do
