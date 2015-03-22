@@ -19,4 +19,19 @@ describe Label do
     it { should have_db_index(:user_id) }
   end
 
+  describe 'uniqueness' do
+    it 'should not let the same label be assigned to the compliment twice' do
+      new_user = create(:user)
+      new_compliment = create(:compliment, user: new_user)
+      new_compliment.save!
+
+      new_label = create(:label)
+      new_label.save!
+
+      compliment_label_1 = create(:compliment_label, user: new_user, compliment: new_compliment, label: new_label)
+      compliment_label_2 = build(:compliment_label, user: new_user, compliment: new_compliment, label: new_label)
+
+      expect{ compliment_label_2.save! }.to raise_exception
+    end
+  end
 end
