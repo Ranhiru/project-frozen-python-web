@@ -1,5 +1,5 @@
-Project Frozen Web
-==================
+Project Frozen Python Web
+=========================
 
 This is the web application for *Project Frozen Python* built with Ruby on Rails 4. HAML is preferred over ERB over here and of course CoffeeScript to go along...
 
