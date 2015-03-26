@@ -24,6 +24,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 gem 'haml'
 gem 'haml-rails'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -54,6 +58,9 @@ group :development, :test do
   gem 'faker'
   gem "factory_girl_rails", "~> 4.0"
   gem 'database_cleaner'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'site_prism'
 end
 
 group :production do
