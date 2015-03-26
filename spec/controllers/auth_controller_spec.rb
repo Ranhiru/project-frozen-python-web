@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe AuthController, type: :controller do
 
   describe "GET #login" do
-    it "returns http success" do
+    it "redirects to auth/facebook" do
       get :login
-      expect(response).to have_http_status(:success)
+      expect(response).to redirect_to "/auth/facebook"
     end
   end
 
