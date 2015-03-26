@@ -1,5 +1,9 @@
 require 'factory_girl_rails'
 require 'capybara/rspec'
+require 'database_cleaner'
+require 'capybara'
+require 'selenium-webdriver'
+require 'site_prism'
 
 RSpec.configure do |config|
 
