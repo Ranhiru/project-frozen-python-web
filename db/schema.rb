@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322021212) do
+ActiveRecord::Schema.define(version: 20150328004207) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "compliment_id"
@@ -72,8 +72,12 @@ ActiveRecord::Schema.define(version: 20150322021212) do
     t.string   "username"
     t.string   "email_address"
     t.text     "profile_pic_url"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.text     "uid"
+    t.text     "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.text     "provider"
   end
 
   add_index "users", ["email_address"], name: "index_users_on_email_address", unique: true
