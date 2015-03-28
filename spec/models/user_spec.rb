@@ -1,9 +1,15 @@
 require 'rails_helper'
 
 describe User do
-  describe 'presence validations' do
+  describe 'username' do
     it { should validate_presence_of(:username) }
+  end
+
+  describe 'email_address' do
     it { should validate_presence_of(:email_address) }
+  end
+
+  describe 'profile_pic_url' do
     it { should validate_presence_of(:profile_pic_url) }
   end
 
