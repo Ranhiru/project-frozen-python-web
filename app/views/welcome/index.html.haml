@@ -2,6 +2,6 @@
 
 %br
 - if current_user
-  %h1 Welcome #{current_user.username}
+  %h1.welcome_message Welcome #{current_user.username}
 - else
   = link_to("Login", login_path, class: "login_link")
