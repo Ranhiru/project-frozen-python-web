@@ -11,7 +11,7 @@ FactoryGirl.define do
 
   trait :with_auth do
     uid { id }
-    provider = "facebook"
+    provider { "facebook" }
     oauth_token { Faker::Number.number(10) }
     oauth_expires_at { Faker::Date.between(10, 60) }
   end
