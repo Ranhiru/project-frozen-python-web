@@ -1,5 +1,7 @@
 %h1 Project Frozen Python - Coming soon...
 
 %br
-
-= link_to("Login", login_path, class: "login_link")
+- if current_user
+  %h1 Welcome #{current_user.username}
+- else
+  = link_to("Login", login_path, class: "login_link")
