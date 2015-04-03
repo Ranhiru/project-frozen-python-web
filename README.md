@@ -18,9 +18,13 @@ A few interesting gems have being used to aid in testing (Thanks thoughtbot!)
 * factory_girl_rails
 * database_cleaner
 
-Planned
-* Feature tests would be running with capybara + selenium
-* UI -> bootstrap 3
-* Auth: omniauth + omniauth-facebook 
+*****Done**
+
+* Feature tests are running using capybara and selenium. More features tests would be added along the way...
+* Authentication added using omniauth and facebook
+
+**Planned**
+
+* Work on UI has started. Planning on using bootstrap with backbone router + JST templates. Lot's to learn!
 
 
