@@ -18,7 +18,7 @@ A few interesting gems have being used to aid in testing (Thanks thoughtbot!)
 * factory_girl_rails
 * database_cleaner
 
-*****Done**
+**Done**
 
 * Feature tests are running using capybara and selenium. More features tests would be added along the way...
 * Authentication added using omniauth and facebook
