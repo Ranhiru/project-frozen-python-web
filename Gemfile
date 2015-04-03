@@ -28,6 +28,13 @@ gem 'haml-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+gem 'bootstrap-sass', '~> 2.3.2.2'
+gem 'haml_coffee_assets', '1.16.0'
+gem 'jquery-ui-rails'
+gem 'rails-backbone'
+gem "paranoia", "~> 2.0"
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
