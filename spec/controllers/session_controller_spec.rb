@@ -4,6 +4,7 @@ describe SessionController do
   let(:uid) { "1234567890" }
   let(:provider) { "facebook" }
   let(:auth_response) { create(:auth_response, id: uid) }
+  let(:new_user) { User.first }
 
   describe 'create' do
     before do
@@ -11,7 +12,7 @@ describe SessionController do
     end
 
     after do
-      expect(session[:user_id]).to_not be nil
+      expect(session[:user_id]).to be new_user.id
       expect(response).to redirect_to(root_url)
     end
 
