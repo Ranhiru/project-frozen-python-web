@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe SessionController do
-  # let(:john) { create :user, :with_auth }
   let(:uid) { "1234567890" }
   let(:provider) { "facebook" }
   let(:auth_response) { create(:auth_response, id: uid) }
