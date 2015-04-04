@@ -1,0 +1,106 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootswatch/paper/variables";
+@import "bootstrap";
+@import "bootswatch/paper/bootswatch";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+$nav-bar-color: #3F7CAA;
+$nav-bar-secondary-color: #FFF;
+$compliment-text-color: #000;
+
+@media (min-width: 768px) {
+  .navbar-nav{
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu {
+    background-color: white;
+  }
+}
+
+.nav-bar {
+  background-color: $nav-bar-color;
+  border-color: #e7e7e7;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  border-color: $nav-bar-secondary-color;
+}
+
+.icon-bar {
+  background-color: $nav-bar-secondary-color;
+}
+
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  color: $nav-bar-secondary-color;
+}
+
+.nav > li > a:focus {
+  background-color: transparent;
+}
+
+.navbar-text.active {
+  text-decoration: underline;
+}
+
+.nav > li > a:hover {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  color: $nav-bar-secondary-color;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.navbar-collapse {
+  -webkit-overflow-scrolling: touch;
+}
+
+.compliments-container {
+  // width: 100%;
+}
+
+.compliment {
+  color: $compliment-text-color;
+  background-color: white;
+  border: 3px solid black;
+  margin: 3px;
+  border-radius: 6px;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: #666666;
+  border-color: #2196F3;
+}

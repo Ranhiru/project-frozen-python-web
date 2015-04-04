@@ -41,11 +41,6 @@ describe "authentication", :type => :feature do
         expect(@home).to_not have_facebook_login_link
       end
 
-      it 'will show the users name' do
-        expect(@home).to have_welcome_message
-        expect(@home.welcome_message).to have_content user.username
-      end
-
       it 'will not create a new user' do
         expect(no_of_users).to eq 1
       end
@@ -65,8 +60,7 @@ describe "authentication", :type => :feature do
 
       it 'will show the users name' do
         new_user = User.first
-        expect(@home).to have_welcome_message
-        expect(@home.welcome_message).to have_content new_user.username
+        expect(@home.nav_bar).to have_content new_user.username
       end
 
       it 'will create a new user' do

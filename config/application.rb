@@ -22,5 +22,11 @@ module ProjectFrozenPythonWeb
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    Figaro.require_keys("app_id", "app_secret")
+
+
+    if Rails.env.development?
+      OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+    end
   end
 end
