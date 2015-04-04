@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rspec/rspec-core.git
-  revision: 76c0259f50fa6409af5cbaa544ab8699c5abe04f
+  revision: 80fc79eb71ac2e8fd22133ffbf35dbf06de14d0e
   branch: master
   specs:
     rspec-core (3.3.0.pre)
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/rspec/rspec-expectations.git
-  revision: f289e21167238e27c64bdb1cece8359bf778a0d5
+  revision: 734fe2e3969e7d7d8b851f07230f981df5a43938
   branch: master
   specs:
     rspec-expectations (3.3.0.pre)
@@ -85,10 +85,14 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
     arel (6.0.0)
+    autoprefixer-rails (5.1.8)
+      execjs
+      json
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (2.3.2.2)
-      sass (~> 3.2)
+    bootstrap-sass (3.3.4.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
@@ -286,7 +290,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 2.3.2.2)
+  bootstrap-sass (~> 3.3.4)
   byebug
   capybara
   coffee-rails (~> 4.1.0)
@@ -295,7 +299,7 @@ DEPENDENCIES
   faker
   haml
   haml-rails
-  haml_coffee_assets (= 1.16.0)
+  haml_coffee_assets
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails

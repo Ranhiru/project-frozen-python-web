@@ -28,8 +28,8 @@ gem 'haml-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
-gem 'bootstrap-sass', '~> 2.3.2.2'
-gem 'haml_coffee_assets', '1.16.0'
+gem 'bootstrap-sass', '~> 3.3.4'
+gem 'haml_coffee_assets'
 gem 'jquery-ui-rails'
 gem 'rails-backbone'
 gem "paranoia", "~> 2.0"
