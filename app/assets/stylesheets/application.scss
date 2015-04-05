@@ -56,6 +56,14 @@ $nav-bar-secondary-color: #FFF;
   color: $nav-bar-secondary-color;
 }
 
+.nav > li > a:focus {
+  background-color: transparent;
+}
+
+.navbar-text.active {
+  text-decoration: underline;
+}
+
 .nav > li > a:hover {
   position: relative;
   display: block;

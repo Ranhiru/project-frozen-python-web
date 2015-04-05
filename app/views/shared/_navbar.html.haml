@@ -7,7 +7,7 @@
         %span.icon-bar
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
-        %li.navbar-text
+        %li.navbar-text.active
           %a{:href => "#"} Home
         %li.navbar-text
           %a{:href => "#"} Popular
@@ -16,4 +16,7 @@
         %li.navbar-text
           %a{:href => "#"} New
         %li.navbar-text
-          %a{:href => "#"} Sign In/Register
+          - if current_user
+            %a{:href => "#"} #{current_user.username} ▼
+          - else
+            = link_to("Sign In/Register", login_path, class: "login_link")
