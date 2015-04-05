@@ -8,15 +8,15 @@
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
         %li.navbar-text.active
-          %a{:href => "#"} Home
+          %a#home{:href => "#"} Home
         %li.navbar-text
-          %a{:href => "#"} Popular
+          %a#popular{:href => "#"} Popular
         %li.navbar-text
-          %a{:href => "#"} Most Shared
+          %a#most_shared{:href => "#"} Most Shared
         %li.navbar-text
-          %a{:href => "#"} New
+          %a#new{:href => "#"} New
         %li.navbar-text
           - if current_user
-            %a{:href => "#"} #{current_user.username} ▼
+            %a#current_user{:href => "#"} #{current_user.username} ▼
           - else
-            = link_to("Sign In/Register", login_path, class: "login_link")
+            = link_to("Sign In/Register", login_path, class: "login_link", id: "signin_login")
