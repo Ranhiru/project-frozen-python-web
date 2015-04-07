@@ -20,3 +20,20 @@
             %a#current_user{:href => "#"} #{current_user.username} ▼
           - else
             = link_to("Sign In/Register", login_path, class: "login_link", id: "signin_login")
+        %li.navbar-text.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Dropdown
+            %span.caret
+            %ul.dropdown-menu{:role => "menu"}
+              %li
+                %a{:href => "#"} Action
+              %li
+                %a{:href => "#"} Another action
+              %li
+                %a{:href => "#"} Something else here
+              %li.divider
+                %li
+                  %a{:href => "#"} Separated link
+              %li.divider
+                %li
+                  %a{:href => "#"} One more separated link
