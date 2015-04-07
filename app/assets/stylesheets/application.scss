@@ -13,10 +13,15 @@
  */
 
 @import "bootstrap-sprockets";
+@import "bootswatch/paper/variables";
 @import "bootstrap";
+@import "bootswatch/paper/bootswatch";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 $nav-bar-color: #3F7CAA;
 $nav-bar-secondary-color: #FFF;
+$compliment-text-color: #000;
 
 @media (min-width: 768px) {
   .navbar-nav{
@@ -75,4 +80,16 @@ $nav-bar-secondary-color: #FFF;
 
 .navbar-collapse {
   -webkit-overflow-scrolling: touch;
+}
+
+.compliments-container {
+  // width: 100%;
+}
+
+.compliment {
+  color: $compliment-text-color;
+  background-color: white;
+  border: 3px solid black;
+  margin: 3px;
+  border-radius: 6px;
 }
