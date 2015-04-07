@@ -15,25 +15,24 @@
           %a#most_shared{:href => "#"} Most Shared
         %li.navbar-text
           %a#new{:href => "#"} New
-        %li.navbar-text
-          - if current_user
-            %a#current_user{:href => "#"} #{current_user.username} ▼
-          - else
+        - if current_user
+          %li.navbar-text.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              #{current_user.username}
+              %span.caret
+              %ul.dropdown-menu{:role => "menu"}
+                %li
+                  %a{:href => "#"} My Profile
+                %li
+                  %a{:href => "#"} Logout
+                %li
+                  %a{:href => "#"} Something else here
+                %li.divider
+                  %li
+                    %a{:href => "#"} Separated link
+                %li.divider
+                  %li
+                    %a{:href => "#"} One more separated link
+        - else
+          %li.navbar-text
             = link_to("Sign In/Register", login_path, class: "login_link", id: "signin_login")
-        %li.navbar-text.dropdown
-          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-            Dropdown
-            %span.caret
-            %ul.dropdown-menu{:role => "menu"}
-              %li
-                %a{:href => "#"} Action
-              %li
-                %a{:href => "#"} Another action
-              %li
-                %a{:href => "#"} Something else here
-              %li.divider
-                %li
-                  %a{:href => "#"} Separated link
-              %li.divider
-                %li
-                  %a{:href => "#"} One more separated link
