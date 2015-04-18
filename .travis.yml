@@ -5,3 +5,6 @@ rvm:
 script: 
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rspec spec/
+env:
+  secure: "UmNPrBUG2R/TE4jhITKYbxm6JXjdhAmy//rjNVEocrlwg9RB5Krgi7vTLuMo3IO5E4hzxpD5qZB4rN2oG9/6p1hDEqM98RSjs4dpIM+JjX+wKZvIB303AinGhA6acRkz46B3/zuNXCm66YB6ObOQN1Nc8keFVPtx66pnLMt9ZQ8="
+  secure: "KroedpZkgPZ6gxYNCvn4IqP85glGe40922s4fASS+Zk3HaPdgQ2IygQzpFfDTJfKpYrGWQwNkxam+NnM6Gqgu6RssJsN8KxjY7B37tG1iNQd45ETqixMLQ1nxmdQhs6UV/NB/Mw/0lwvlNCcxym62+ekj8BndZE0oTngZhTjfbc="
