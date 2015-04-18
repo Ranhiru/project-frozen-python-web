@@ -8,7 +8,6 @@ Bundler.require(*Rails.groups)
 
 module ProjectFrozenPythonWeb
   class Application < Rails::Application
-    Rails.logger = Logger.new(STDOUT)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -27,7 +26,6 @@ module ProjectFrozenPythonWeb
 
 
     if Rails.env.development?
-      Rails.logger.warn "Disabling OpenSLL verification in development environment!"
       OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
     end
   end
