@@ -35,6 +35,7 @@ gem 'rails-backbone'
 gem "paranoia", "~> 2.0"
 gem 'bootswatch-rails'
 gem 'font-awesome-sass', '~> 4.3.0'
+gem "figaro"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

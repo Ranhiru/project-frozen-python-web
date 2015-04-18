@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module ProjectFrozenPythonWeb
   class Application < Rails::Application
+    Rails.logger = Logger.new(STDOUT)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -22,5 +23,12 @@ module ProjectFrozenPythonWeb
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    Figaro.require_keys("app_id", "app_secret")
+
+
+    if Rails.env.development?
+      Rails.logger.warn "Disabling OpenSLL verification in development environment!"
+      OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+    end
   end
 end
