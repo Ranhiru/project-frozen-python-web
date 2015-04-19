@@ -32,6 +32,12 @@ $compliment-text-color: #000;
   }
 }
 
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu {
+    background-color: white;
+  }
+}
+
 .nav-bar {
   background-color: $nav-bar-color;
   border-color: #e7e7e7;
@@ -94,7 +100,7 @@ $compliment-text-color: #000;
   border-radius: 6px;
 }
 
-.nav .open > a:focus {
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #666666;
   border-color: #2196F3;
 }
