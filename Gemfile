@@ -29,7 +29,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 gem 'bootstrap-sass', '~> 3.3.4'
-gem 'haml_coffee_assets'
+gem 'haml_coffee_assets', git: "https://github.com/netzpirat/haml_coffee_assets"
 gem 'jquery-ui-rails'
 gem 'rails-backbone'
 gem "paranoia", "~> 2.0"
